@@ -4,257 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenity Yoga - Private Practice</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="yoga_styles.css">
+    <script src="yoga_script.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo" onclick="showPage('home')">Serenity Yoga</a>
+            <a href="index.html" class="logo">Serenity Yoga</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
-                <li><a href="#" onclick="showPage('hatha')">Hatha Yoga</a></li>
-                <li><a href="#" onclick="showPage('vinyasa')">Vinyasa Flow</a></li>
-                <li><a href="#" onclick="showPage('yin')">Yin Yoga</a></li>
-                <li><a href="#" onclick="showPage('restorative')">Restorative</a></li>
-                <li><a href="#" onclick="showPage('about')">About</a></li>
-                <li><a href="#" onclick="showPage('pricing')">Pricing</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="hatha.html">Hatha Yoga</a></li>
+                <li><a href="vinyasa.html">Vinyasa Flow</a></li>
+                <li><a href="yin.html">Yin Yoga</a></li>
+                <li><a href="restorative.html">Restorative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
         </div>
     </nav>
 
     <div class="container">
-        <!-- Home Page -->
-        <div id="home" class="page active">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>Welcome to Serenity Yoga</h1>
-                    <p>Discover inner peace and strength through personalized private yoga sessions</p>
-                </div>
-            </div>
-            
-            <h2 class="section-title">Explore Our Yoga Styles</h2>
-            <div class="yoga-styles">
-                <div class="style-card" onclick="showPage('hatha')">
-                    <h3>Hatha Yoga</h3>
-                    <p>A gentle, slower-paced practice focusing on basic postures and breathing techniques. Perfect for beginners and those seeking relaxation.</p>
-                </div>
-                <div class="style-card" onclick="showPage('vinyasa')">
-                    <h3>Vinyasa Flow</h3>
-                    <p>Dynamic sequences that connect breath with movement, creating a flowing meditation in motion.</p>
-                </div>
-                <div class="style-card" onclick="showPage('yin')">
-                    <h3>Yin Yoga</h3>
-                    <p>Deep, passive stretches held for extended periods to target connective tissues and promote flexibility.</p>
-                </div>
-                <div class="style-card" onclick="showPage('restorative')">
-                    <h3>Restorative Yoga</h3>
-                    <p>Ultra-relaxing practice using props to support the body in restful poses for deep healing and stress relief.</p>
-                </div>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Serenity Yoga</h1>
+                <p>Discover inner peace and strength through personalized private yoga sessions</p>
             </div>
         </div>
-
-        <!-- Hatha Yoga Page -->
-        <div id="hatha" class="page">
-            <h1 class="section-title">Hatha Yoga</h1>
-            <div class="yoga-form">
-                <div class="form-group">
-                    <label for="hatha-images">Upload Images (2 maximum):</label>
-                    <input type="file" id="hatha-images" accept="image/*" multiple onchange="handleImageUpload('hatha', this.files)">
-                    <div class="image-preview" id="hatha-preview">
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload first image</div>
-                        </div>
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload second image</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="hatha-description">Description:</label>
-                    <textarea id="hatha-description" placeholder="Write about Hatha Yoga style, benefits, what to expect in sessions..."></textarea>
-                </div>
-                <button class="btn" onclick="saveYogaStyle('hatha')">Save Changes</button>
+        
+        <h2 class="section-title">Explore Our Yoga Styles</h2>
+        <div class="yoga-styles">
+            <div class="style-card" onclick="window.location.href='hatha.html'">
+                <h3>Hatha Yoga</h3>
+                <p>A gentle, slower-paced practice focusing on basic postures and breathing techniques. Perfect for beginners and those seeking relaxation.</p>
             </div>
-        </div>
-
-        <!-- Vinyasa Flow Page -->
-        <div id="vinyasa" class="page">
-            <h1 class="section-title">Vinyasa Flow</h1>
-            <div class="yoga-form">
-                <div class="form-group">
-                    <label for="vinyasa-images">Upload Images (2 maximum):</label>
-                    <input type="file" id="vinyasa-images" accept="image/*" multiple onchange="handleImageUpload('vinyasa', this.files)">
-                    <div class="image-preview" id="vinyasa-preview">
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload first image</div>
-                        </div>
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload second image</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="vinyasa-description">Description:</label>
-                    <textarea id="vinyasa-description" placeholder="Write about Vinyasa Flow style, benefits, what to expect in sessions..."></textarea>
-                </div>
-                <button class="btn" onclick="saveYogaStyle('vinyasa')">Save Changes</button>
+            <div class="style-card" onclick="window.location.href='vinyasa.html'">
+                <h3>Vinyasa Flow</h3>
+                <p>Dynamic sequences that connect breath with movement, creating a flowing meditation in motion.</p>
             </div>
-        </div>
-
-        <!-- Yin Yoga Page -->
-        <div id="yin" class="page">
-            <h1 class="section-title">Yin Yoga</h1>
-            <div class="yoga-form">
-                <div class="form-group">
-                    <label for="yin-images">Upload Images (2 maximum):</label>
-                    <input type="file" id="yin-images" accept="image/*" multiple onchange="handleImageUpload('yin', this.files)">
-                    <div class="image-preview" id="yin-preview">
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload first image</div>
-                        </div>
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload second image</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="yin-description">Description:</label>
-                    <textarea id="yin-description" placeholder="Write about Yin Yoga style, benefits, what to expect in sessions..."></textarea>
-                </div>
-                <button class="btn" onclick="saveYogaStyle('yin')">Save Changes</button>
+            <div class="style-card" onclick="window.location.href='yin.html'">
+                <h3>Yin Yoga</h3>
+                <p>Deep, passive stretches held for extended periods to target connective tissues and promote flexibility.</p>
             </div>
-        </div>
-
-        <!-- Restorative Yoga Page -->
-        <div id="restorative" class="page">
-            <h1 class="section-title">Restorative Yoga</h1>
-            <div class="yoga-form">
-                <div class="form-group">
-                    <label for="restorative-images">Upload Images (2 maximum):</label>
-                    <input type="file" id="restorative-images" accept="image/*" multiple onchange="handleImageUpload('restorative', this.files)">
-                    <div class="image-preview" id="restorative-preview">
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload first image</div>
-                        </div>
-                        <div class="image-slot">
-                            <div class="image-placeholder">Click to upload second image</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="restorative-description">Description:</label>
-                    <textarea id="restorative-description" placeholder="Write about Restorative Yoga style, benefits, what to expect in sessions..."></textarea>
-                </div>
-                <button class="btn" onclick="saveYogaStyle('restorative')">Save Changes</button>
-            </div>
-        </div>
-
-        <!-- About Page -->
-        <div id="about" class="page">
-            <h1 class="section-title">About Us</h1>
-            <div class="contact-info">
-                <h2>Our Story</h2>
-                <p style="margin-bottom: 2rem; line-height: 1.8;">Welcome to Serenity Yoga, where we believe that yoga is a personal journey of self-discovery and healing. Our private yoga sessions are designed to meet you exactly where you are in your practice, whether you're a complete beginner or an experienced practitioner looking to deepen your understanding.</p>
-                
-                <h2>Our Approach</h2>
-                <p style="margin-bottom: 2rem; line-height: 1.8;">We offer personalized, one-on-one yoga instruction that focuses on your individual needs, goals, and physical abilities. Our sessions combine traditional yoga wisdom with modern understanding of anatomy and wellness, creating a safe and nurturing environment for your practice.</p>
-                
-                <h2>Why Choose Private Sessions?</h2>
-                <div style="margin-bottom: 2rem;">
-                    <p style="margin-bottom: 1rem; line-height: 1.8;">• Personalized attention and customized sequences</p>
-                    <p style="margin-bottom: 1rem; line-height: 1.8;">• Flexibility to practice at your own pace</p>
-                    <p style="margin-bottom: 1rem; line-height: 1.8;">• Address specific physical concerns or limitations</p>
-                    <p style="margin-bottom: 1rem; line-height: 1.8;">• Deeper understanding of yoga philosophy and breathwork</p>
-                    <p style="margin-bottom: 1rem; line-height: 1.8;">• Convenient scheduling that fits your lifestyle</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pricing Page -->
-        <div id="pricing" class="page">
-            <h1 class="section-title">Pricing</h1>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3>Single Session</h3>
-                    <div class="price">$85</div>
-                    <p>Perfect for trying out private yoga or occasional sessions</p>
-                    <ul style="text-align: left; margin: 1rem 0;">
-                        <li>60-minute personalized session</li>
-                        <li>Customized sequence</li>
-                        <li>Breathwork and meditation</li>
-                        <li>Take-home practice notes</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h3>Package of 4</h3>
-                    <div class="price">$300</div>
-                    <p>Great value for regular practitioners</p>
-                    <ul style="text-align: left; margin: 1rem 0;">
-                        <li>4 x 60-minute sessions</li>
-                        <li>Progressive sequence development</li>
-                        <li>Flexibility to schedule as needed</li>
-                        <li>Save $40 compared to single sessions</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h3>Monthly Unlimited</h3>
-                    <div class="price">$400</div>
-                    <p>For dedicated practitioners seeking transformation</p>
-                    <ul style="text-align: left; margin: 1rem 0;">
-                        <li>Unlimited 60-minute sessions</li>
-                        <li>Priority scheduling</li>
-                        <li>Monthly goal setting and review</li>
-                        <li>Home practice development</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <p><strong>All packages are valid for 3 months from purchase date</strong></p>
-                <p>Payment options: Cash, Venmo, PayPal, or bank transfer</p>
-            </div>
-        </div>
-
-        <!-- Contact Page -->
-        <div id="contact" class="page">
-            <h1 class="section-title">Contact Us</h1>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>hello@serenityyoga.com</p>
-                    <p>Response within 24 hours</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <h3>Phone</h3>
-                    <p>(555) 123-YOGA</p>
-                    <p>Text or call for scheduling</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <h3>Location</h3>
-                    <p>In-home sessions available</p>
-                    <p>Serving Greater Metro Area</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🕐</div>
-                    <h3>Hours</h3>
-                    <p>Monday - Friday: 7am - 7pm</p>
-                    <p>Weekends: 8am - 5pm</p>
-                </div>
-            </div>
-            
-            <div class="contact-info">
-                <h2>Ready to Begin Your Journey?</h2>
-                <p style="text-align: center; margin-bottom: 2rem; line-height: 1.8;">
-                    We'd love to hear from you! Whether you have questions about our yoga styles, want to discuss your goals, 
-                    or are ready to book your first session, don't hesitate to reach out. Every yoga journey begins with a single step.
-                </p>
-                <div style="text-align: center;">
-                    <button class="btn">Schedule Your First Session</button>
-                </div>
+            <div class="style-card" onclick="window.location.href='restorative.html'">
+                <h3>Restorative Yoga</h3>
+                <p>Ultra-relaxing practice using props to support the body in restful poses for deep healing and stress relief.</p>
             </div>
         </div>
     </div>

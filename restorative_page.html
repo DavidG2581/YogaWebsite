@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restorative Yoga - Serenity Yoga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Serenity Yoga</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hatha.html">Hatha Yoga</a></li>
+                <li><a href="vinyasa.html">Vinyasa Flow</a></li>
+                <li><a href="yin.html">Yin Yoga</a></li>
+                <li><a href="restorative.html" class="active">Restorative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Restorative Yoga</h1>
+        <div class="yoga-form">
+            <div class="form-group">
+                <label for="restorative-images">Upload Images (2 maximum):</label>
+                <input type="file" id="restorative-images" accept="image/*" multiple onchange="handleImageUpload('restorative', this.files)">
+                <div class="image-preview" id="restorative-preview">
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload first image</div>
+                    </div>
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload second image</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="restorative-description">Description:</label>
+                <textarea id="restorative-description" placeholder="Write about Restorative Yoga style, benefits, what to expect in sessions...">Restorative Yoga is a deeply relaxing practice that uses props to fully support the body in gentle poses, allowing for complete relaxation and restoration. This practice activates the parasympathetic nervous system, promoting healing, reducing stress, and restoring balance to both body and mind.
+
+Key elements of Restorative Yoga:
+• Poses held for 10-20 minutes with full prop support
+• Focus on complete relaxation rather than stretching
+• Use of bolsters, blankets, blocks, and eye pillows
+• Emphasis on breath awareness and letting go
+• Creates a sense of deep rest and renewal
+
+Perfect for:
+• Managing stress, anxiety, and overwhelm
+• Recovery from illness or injury
+• Balancing an active lifestyle
+• Improving sleep quality
+• Cultivating mindfulness and inner peace
+
+During our private Restorative sessions, we create a sanctuary-like environment where you can completely surrender. Each pose is carefully set up with props to ensure maximum comfort, allowing your body to release tension naturally. This practice is suitable for all levels and especially beneficial for those dealing with chronic stress or fatigue.</textarea>
+            </div>
+            <button class="btn" onclick="saveYogaStyle('restorative')">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

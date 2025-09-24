@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyasa Flow - Serenity Yoga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Serenity Yoga</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hatha.html">Hatha Yoga</a></li>
+                <li><a href="vinyasa.html" class="active">Vinyasa Flow</a></li>
+                <li><a href="yin.html">Yin Yoga</a></li>
+                <li><a href="restorative.html">Restorative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Vinyasa Flow</h1>
+        <div class="yoga-form">
+            <div class="form-group">
+                <label for="vinyasa-images">Upload Images (2 maximum):</label>
+                <input type="file" id="vinyasa-images" accept="image/*" multiple onchange="handleImageUpload('vinyasa', this.files)">
+                <div class="image-preview" id="vinyasa-preview">
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload first image</div>
+                    </div>
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload second image</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vinyasa-description">Description:</label>
+                <textarea id="vinyasa-description" placeholder="Write about Vinyasa Flow style, benefits, what to expect in sessions...">Vinyasa Flow is a style of yoga that connects movement with breath to create a flowing sequence of poses. The word "vinyasa" can be translated as "to place in a special way," referring to the mindful arrangement of poses that create a seamless flow from one posture to another.
+
+In our Vinyasa sessions, you'll experience:
+• Dynamic flowing sequences that build heat in the body
+• Synchronized breath and movement patterns
+• Creative variations and transitions
+• Strengthening and flexibility work combined
+• Meditative quality through continuous movement
+
+This practice is perfect for those who enjoy more vigorous movement and want to build strength, flexibility, and endurance simultaneously. Our private Vinyasa sessions can be adapted for all levels, from gentle flows for beginners to more challenging sequences for advanced practitioners.
+
+Each session includes a warm-up, dynamic flow sequences, peak poses, and a restorative cool-down with final relaxation.</textarea>
+            </div>
+            <button class="btn" onclick="saveYogaStyle('vinyasa')">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

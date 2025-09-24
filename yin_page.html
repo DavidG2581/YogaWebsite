@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yin Yoga - Serenity Yoga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Serenity Yoga</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hatha.html">Hatha Yoga</a></li>
+                <li><a href="vinyasa.html">Vinyasa Flow</a></li>
+                <li><a href="yin.html" class="active">Yin Yoga</a></li>
+                <li><a href="restorative.html">Restorative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Yin Yoga</h1>
+        <div class="yoga-form">
+            <div class="form-group">
+                <label for="yin-images">Upload Images (2 maximum):</label>
+                <input type="file" id="yin-images" accept="image/*" multiple onchange="handleImageUpload('yin', this.files)">
+                <div class="image-preview" id="yin-preview">
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload first image</div>
+                    </div>
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload second image</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="yin-description">Description:</label>
+                <textarea id="yin-description" placeholder="Write about Yin Yoga style, benefits, what to expect in sessions...">Yin Yoga is a quiet, meditative practice that involves holding passive poses for extended periods, typically 3-7 minutes. This slower-paced style targets the deep connective tissues, joints, fascia, and ligaments in the body, promoting flexibility and creating space for introspection.
+
+What makes Yin unique:
+• Poses are held for 3-7 minutes using props for support
+• Focus on hip openers, gentle backbends, and forward folds
+• Emphasis on finding your edge and breathing through discomfort
+• Meditative quality that calms the nervous system
+• Balances more active (yang) practices
+
+Benefits include:
+• Increased flexibility and joint mobility
+• Stress reduction and deep relaxation
+• Improved circulation and energy flow
+• Enhanced mindfulness and self-awareness
+• Preparation for meditation
+
+Our private Yin sessions provide a safe space to explore your body's limits with personalized guidance. We'll use props like bolsters, blocks, and blankets to ensure you can relax completely into each pose while maintaining proper alignment.</textarea>
+            </div>
+            <button class="btn" onclick="saveYogaStyle('yin')">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

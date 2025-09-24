@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatha Yoga - Serenity Yoga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Serenity Yoga</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hatha.html" class="active">Hatha Yoga</a></li>
+                <li><a href="vinyasa.html">Vinyasa Flow</a></li>
+                <li><a href="yin.html">Yin Yoga</a></li>
+                <li><a href="restorative.html">Restorative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Hatha Yoga</h1>
+        <div class="yoga-form">
+            <div class="form-group">
+                <label for="hatha-images">Upload Images (2 maximum):</label>
+                <input type="file" id="hatha-images" accept="image/*" multiple onchange="handleImageUpload('hatha', this.files)">
+                <div class="image-preview" id="hatha-preview">
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload first image</div>
+                    </div>
+                    <div class="image-slot">
+                        <div class="image-placeholder">Click to upload second image</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="hatha-description">Description:</label>
+                <textarea id="hatha-description" placeholder="Write about Hatha Yoga style, benefits, what to expect in sessions...">Hatha Yoga is a gentle introduction to the most basic yoga postures. You won't work up a sweat in a hatha yoga class, but you should end up leaving class feeling longer, looser, and more relaxed. In these classes, we focus on proper alignment and hold poses for several breaths. This makes it perfect for beginners who are learning the fundamentals, and also ideal for anyone looking to slow down and focus on their practice.
+
+Key benefits include:
+• Improved flexibility and strength
+• Better posture and alignment
+• Stress reduction and relaxation
+• Enhanced body awareness
+• Foundation for other yoga styles
+
+Our private Hatha sessions are tailored to your individual needs, whether you're dealing with specific physical limitations or simply want to deepen your understanding of the poses. Each session includes breathwork, gentle movement, and relaxation techniques.</textarea>
+            </div>
+            <button class="btn" onclick="saveYogaStyle('hatha')">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
